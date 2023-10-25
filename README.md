@@ -12,9 +12,7 @@ To build and run this application, you need to have Rust and Cargo installed on 
 
 2. Navigate to the project directory using your terminal.
 
-3. Build and run the application using Cargo:
-
- `cargo run`
+3. Build and run the application using Cargo: `cargo run`
 
 The program will compile, execute, and display the output in your terminal.
 
