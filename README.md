@@ -1,6 +1,6 @@
 # Collatz Rust
 
-This is a Rust application that generates a Collatz-like sequence based on the specified input values.
+This is a Rust application that generates a Collatz-like sequence based on Bitwise Cyclic Tag
 
 ## Prerequisites
 
