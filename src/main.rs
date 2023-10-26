@@ -1,6 +1,3 @@
-use std::thread::sleep;
-use std::time::Duration;
-
 fn main() {
     let mut q = String::from("100100100100100");
     let mut r = String::from("101110101011011101001110101110101110100000");
@@ -17,6 +14,5 @@ fn main() {
         }
         r = r.chars().skip(1).chain(r.chars().take(1)).collect();
         println!("{}", q);
-        sleep(Duration::from_secs_f32(0.03));
     }
 }
