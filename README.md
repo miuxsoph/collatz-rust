@@ -1,4 +1,4 @@
-# Collatz Rust
+# Collatz Rust BCT
 
 This is a Rust application that generates a Collatz-like sequence based on Bitwise Cyclic Tag
 
