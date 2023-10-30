@@ -14,6 +14,10 @@ To build and run this application, you need to have Rust and Cargo installed on 
 
 3. Build and run the application using Cargo: `cargo run`
 
+3. For threaded mode: `cargo run threaded`
+
+4. Recursive "mc91" function: `cargo run threaded 91`
+
 The program will compile, execute, and display the output in your terminal.
 
 based on python code from this model:
