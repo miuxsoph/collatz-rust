@@ -23,5 +23,4 @@ The program will compile, execute, and display the output in your terminal.
 based on python code from this model:
 https://www.youtube.com/watch?v=EsuRs7plG88
 
-
-b.py is same concept with mc91 function
+mc91.py is same concept with mc91 function in python
