@@ -20,6 +20,11 @@ To build and run this application, you need to have Rust and Cargo installed on 
 
 4. Recursive "mc91" function: `cargo run threaded 91`
 
+5. Incremental mode will use the !.txt files and a 1.1lang interpereter to build the q value for the BCT incrementally
+```
+cargo run threaded incremental
+``` 
+
 The program will compile, execute, and display the output in your terminal.
 
 based on python code from this model:
