@@ -30,7 +30,7 @@ https://esolangs.org/wiki/1.1<br>
 The program will compile, execute, and display the output in your terminal.
 
 based on python code from this model:
-https://www.youtube.com/watch?v=EsuRs7plG88
+https://www.youtube.com/watch?v=EsuRs7plG88<br>
 1.1 interpereter: https://github.com/Sxakalo/1.1-Lang
 
 mc91.py is same concept with mc91 function in python
