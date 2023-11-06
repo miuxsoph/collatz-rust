@@ -61,35 +61,6 @@ fn interpret_program(prog: Vec<&str>, debug: bool) -> String {
         buffer
 }
 
-fn run_for_all_files() {
-    let current_dir = std::env::current_dir().expect("Failed to get current directory");
-
-    let mut files: Vec<_> = fs::read_dir(current_dir)
-        .expect("Failed to read directory")
-        .filter_map(Result::ok)
-        .map(|dir_entry| dir_entry.path())
-        .filter(|path| {
-            if let Some(extension) = path.extension() {
-                if let Some(ext) = extension.to_str() {
-                    return ext.to_lowercase() == "txt";
-                }
-            }
-            false
-        })
-        .collect();
-
-    files.sort();
-
-    for file in files {
-        let file_content = fs::read_to_string(&file).expect("Failed to read file");
-        let prog: Vec<&str> = file_content.lines().collect();
-        let debug = false; // Set debug mode if needed
-
-        let result = interpret_program(prog, debug);
-        print!("{}", result);
-    }
-}
-
 fn generate_q() -> String {
     let current_dir = std::env::current_dir().expect("Failed to get current directory");
 
@@ -126,8 +97,8 @@ fn generate_q() -> String {
 pub fn run() {
     let q = generate_q(); // Get the generated value as a string
 
-    let r = String::from("101110101011011101001110101110101110100000");
-    let w = 3;
+    let r = String::from("100");
+    let w = 2;
     let stop_event = Arc::new(Mutex::new(false));
     let (q_arc, r_arc) = (Arc::new(Mutex::new(q)), Arc::new(Mutex::new(r)));
     let (q_arc_clone, r_arc_clone, stop_event_clone) = (q_arc.clone(), r_arc.clone(), stop_event.clone());
@@ -165,4 +136,3 @@ fn perform_bitwise_cyclic_tag(q: &mut String, r: &mut String, w: usize, stop_eve
         *q = m(q).to_string();
     }
 }
-
