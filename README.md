@@ -20,11 +20,11 @@ To build and run this application, you need to have Rust and Cargo installed on 
 
 4. Recursive "mc91" function: `cargo run threaded 91`
 
-5. Incremental mode
+5. Incremental mode:
 ```
 cargo run threaded incremental
 ``` 
-This mode utilizes a 1.1 lang interpereter to build the value of q using the !!!.txt files
+This mode utilizes a 1.1 lang interpereter to build the value of q using the !!.txt files
 
 The program will compile, execute, and display the output in your terminal.
 
