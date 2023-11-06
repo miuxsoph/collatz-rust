@@ -7,37 +7,37 @@ mod definitions {
 mod threaded {
     pub mod mod_91;
     pub mod mod_100;
+    pub mod incremental;
 }
 
 fn main() {
     let args: Vec<String> = env::args().collect();
 
     if args.len() == 1 {
-        // If no arguments are provided, run the def() function
-        definitions::def::run(); // Call the function from the def module
-    } else {
-        match args.len() {
-            1 => run_threaded("100"), // cargo run
-            2 => {
-                if &args[1] == "threaded" {
-                    run_threaded("100"); // cargo run threaded
-                } else {
-                    println!("Invalid arguments.");
-                }
+        definitions::def::run();
+    } else if args.len() > 4 {
+        println!("Invalid number of arguments.");
+        return;
+    } else if &args[1] == "threaded" {
+        match args.get(2).map(|x| x.as_str()) {
+            None => {
+                run_threaded("100");
             }
-            3 => {
-                if &args[1] == "threaded" {
-                    let mod_to_run = &args[2];
-                    run_threaded(mod_to_run); // cargo run threaded 91 or 100
-                } else {
-                    println!("Error: Expected: 91/100");
-                }
+            Some("91") => {
+                run_threaded("91");
             }
-            _ => {
-                println!("Invalid number of arguments.");
-                return;
+            Some("100") => {
+                run_threaded("100");
+            }
+            Some("incremental") => {
+                run_threaded("incremental");
+            }
+            Some(arg) => {
+                println!("Error: Unexpected argument '{}'", arg);
             }
         }
+    } else {
+        println!("Invalid arguments.");
     }
 }
 
@@ -45,6 +45,7 @@ fn run_threaded(mod_to_run: &str) {
     match mod_to_run {
         "91" => threaded::mod_91::run(),
         "100" => threaded::mod_100::run(),
+        "incremental" => threaded::incremental::run(),
         _ => println!("Invalid mod number."),
     }
 }
