@@ -24,7 +24,7 @@ To build and run this application, you need to have Rust and Cargo installed on 
 ```
 cargo run threaded incremental
 ``` 
-This mode utilizes a 1.1 lang interpereter to build the value of q using the !!.txt files
+This mode utilizes a 1.1 lang interpereter to write the value of q incrementally using the !!.txt files
 
 The program will compile, execute, and display the output in your terminal.
 
