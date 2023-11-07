@@ -97,7 +97,7 @@ fn generate_q() -> String {
 pub fn run() {
     let q = generate_q(); // Get the generated value as a string
 
-    let r = String::from("100");
+    let r = String::from("1000000100000001");
     let w = 2;
     let stop_event = Arc::new(Mutex::new(false));
     let (q_arc, r_arc) = (Arc::new(Mutex::new(q)), Arc::new(Mutex::new(r)));
@@ -112,7 +112,7 @@ pub fn run() {
 
 fn m(n: &str) -> String {
     let n_int: i128 = n.parse().unwrap();
-    if n_int > 100 {
+    if n_int > 108 {
         (n_int - 10).to_string()
     } else {
         m(&(n_int + 11).to_string())
@@ -133,7 +133,7 @@ fn perform_bitwise_cyclic_tag(q: &mut String, r: &mut String, w: usize, stop_eve
         let first_char_r = r.remove(0);
         r.push(first_char_r);
 
-        if let Ok(integer_value) = i128::from_str_radix(&q, 17) {
+        if let Ok(integer_value) = i128::from_str_radix(&q, 36) {
             let value = format!("{:o}", integer_value);
             println!("{}", value);
         }
