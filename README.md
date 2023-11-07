@@ -24,8 +24,8 @@ To build and run this application, you need to have Rust and Cargo installed on 
 ```
 cargo run threaded incremental
 ``` 
-This mode utilizes a 1.1 lang interpereter to write the value of q incrementally using the !!.txt files<br>
-https://esolangs.org/wiki/1.1<br>
+  This mode utilizes a 1.1 lang interpereter to write the value of q incrementally using the !!.txt files<br>
+  https://esolangs.org/wiki/1.1<br>
 
 The program will compile, execute, and display the output in your terminal.
 
