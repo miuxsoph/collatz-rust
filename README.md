@@ -30,9 +30,9 @@ cargo run threaded incremental
 
 The program will compile, execute, and display the output in your terminal.
 
-based on python code from this model:
+based on python code from this model:<br>
 https://www.youtube.com/watch?v=EsuRs7plG88<br>
-1.1 Esolangs: https://esolangs.org/wiki/1.1 
-1.1 interpereter: https://github.com/Sxakalo/1.1-Lang
+1.1 Esolangs: https://esolangs.org/wiki/1.1<br> 
+1.1 interpereter: https://github.com/Sxakalo/1.1-Lang<br>
 
 mc91.py is same concept with mc91 function in python
