@@ -21,16 +21,18 @@ To build and run this application, you need to have Rust and Cargo installed on 
 4. Recursive "mc91" function: `cargo run threaded 91`
 
 5. Incremental mode:
+6. This mode utilizes a 1.1 lang interpereter to write the value of q incrementally using the !!.txt files
 ```
 cargo run threaded incremental
 ``` 
-    This mode utilizes a 1.1 lang interpereter to write the value of q incrementally using the !!.txt files<br>
-    https://esolangs.org/wiki/1.1<br>
+
+    
 
 The program will compile, execute, and display the output in your terminal.
 
 based on python code from this model:
 https://www.youtube.com/watch?v=EsuRs7plG88<br>
+1.1 Esolangs: https://esolangs.org/wiki/1.1 
 1.1 interpereter: https://github.com/Sxakalo/1.1-Lang
 
 mc91.py is same concept with mc91 function in python
