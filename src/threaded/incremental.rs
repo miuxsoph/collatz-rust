@@ -110,6 +110,15 @@ pub fn run() {
     handle.join().unwrap();
 }
 
+fn m(n: &str) -> String {
+    let n_int: i128 = n.parse().unwrap();
+    if n_int > 100 {
+        (n_int - 10).to_string()
+    } else {
+        m(&(n_int + 11).to_string())
+    }
+}
+
 fn perform_bitwise_cyclic_tag(q: &mut String, r: &mut String, w: usize, stop_event: Arc<Mutex<bool>>) {
     while q.len() > w && !*stop_event.lock().unwrap() {
         if r.chars().next() == Some('0') {
@@ -132,3 +141,4 @@ fn perform_bitwise_cyclic_tag(q: &mut String, r: &mut String, w: usize, stop_eve
         *q = m(q).to_string();
     }
 }
+
