@@ -21,7 +21,10 @@ To build and run this application, you need to have Rust and Cargo installed on 
 4. Recursive "mc91" function: `cargo run threaded 91`
 
 5. Incremental mode:<br>
-This mode utilizes a 1.1 lang interpereter to write the value of q incrementally using the !!.txt files
+This mode utilizes a 1.1 lang interpereter to write the value of q incrementally using the !!.txt files<br>
+!.txt files are weights, and you can reconfigure them, copying them multiple times into the directory<br>
+will add that unit to the bitwise cyclic tag system.
+
 ```
 cargo run threaded incremental
 ``` 
